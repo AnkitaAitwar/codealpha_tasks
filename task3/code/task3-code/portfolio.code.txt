@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 40px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .about p {
+      max-width: 700px;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills li {
+      background: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .projects .project {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .contact button {
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .skills ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hi, I'm [ANKITA AITWAR]</h1>
+  <p>Frontend Developer | Creative Coder | Tech Enthusiast</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate frontend developer with experience in building responsive web applications using HTML, CSS, JavaScript, and modern frameworks. I enjoy solving problems and creating visually appealing user interfaces.
+  </p>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Git & GitHub</li>
+    <li>Responsive Design</li>
+  </ul>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <p>This very portfolio site built using HTML, CSS, and JavaScript.</p>
+  </div>
+  <div class="project">
+    <h3>Weather App</h3>
+    <p>Built a real-time weather app using OpenWeather API and JS.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 [Ankita Aitwar]. All rights reserved.</p>
+</footer>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    alert("Thanks for reaching out, " + name + "! I'll get back to you soon.");
+    document.querySelector('form').reset();
+  }
+</script>
+
+</body>
+</html>
